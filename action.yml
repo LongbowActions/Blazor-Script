@@ -3,17 +3,6 @@ description: 'Wait a designated number of milliseconds'
 branding:
   icon: "check-circle"
   color: "purple"
-inputs:
-  repo-token:
-    description: 'github token for the repository'
-    required: true
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
-    required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
 runs:
   using: 'node16'
   main: 'dist/index.js'
