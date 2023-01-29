@@ -25,7 +25,7 @@ async function run() {
     const octokit  = github.getOctokit(githubToken);
     const { owner, repo } = context.repo;
     const labels = ['bug', 'test']
-    const issueNumber = context.payload.number;
+    const issueNumber = context.issue.number;
 
     core.info(`Add labels: ${labels} to ${owner}/${repo}#${issueNumber}`);
 
