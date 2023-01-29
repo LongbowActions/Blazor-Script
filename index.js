@@ -29,12 +29,15 @@ async function run() {
 
     core.info(`Add labels: ${labels} to ${owner}/${repo}#${issueNumber}`);
 
-    await octokit.issues.addLabels({
-      owner,
-      repo,
+    await octokit.request('POST /repos/{owner}/{repo}/issues/{issue_number}/labels', {
+      owner: owner,
+      repo: repo,
       issue_number: issueNumber,
-      labels,
-    });
+      labels: [
+        'bug',
+        'enhancement'
+      ]
+    })
     
   } catch (error) {
     core.setFailed(error.message);
