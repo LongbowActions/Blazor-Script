@@ -1,7 +1,7 @@
 name: 'BB-Script'
 description: 'Wait a designated number of milliseconds'
 branding:
-  icon: "bold"
+  icon: "check-circle"
   color: "purple"
 inputs:
   repo-token:
