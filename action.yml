@@ -1,5 +1,8 @@
 name: 'BB-Script'
 description: 'Wait a designated number of milliseconds'
+branding:
+  icon: "bold"
+  color: "purple"
 inputs:
   milliseconds:  # id of input
     description: 'number of milliseconds to wait'
