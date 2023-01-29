@@ -4,6 +4,9 @@ branding:
   icon: "bold"
   color: "purple"
 inputs:
+  repo-token:
+    description: 'github token for the repository'
+    required: true
   milliseconds:  # id of input
     description: 'number of milliseconds to wait'
     required: true
