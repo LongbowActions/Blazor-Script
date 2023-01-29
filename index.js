@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const { GitHub, context } = require("@actions/github");
+const github = require("@actions/github");
 const wait = require('./wait');
 
 
@@ -21,14 +21,15 @@ async function run() {
       return;
     }
     
-    const github = new GitHub(githubToken);
+    const context = github.context; 
+    const octokit  = github.getOctokit(githubToken);
     const { owner, repo } = context.repo;
     const labels = ['bug', 'test']
     const issueNumber = context.payload.number;
 
     core.info(`Add labels: ${labels} to ${owner}/${repo}#${issueNumber}`);
 
-    await github.issues.addLabels({
+    await octokit.issues.addLabels({
       owner,
       repo,
       issue_number: issueNumber,
