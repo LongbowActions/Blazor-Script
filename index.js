@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const { GitHub, context } = require("@actions/github");
 const wait = require('./wait');
 
 
@@ -22,7 +23,7 @@ async function run() {
     
     const github = new GitHub(githubToken);
     const { owner, repo } = context.repo;
-    const labels = [bug, test]
+    const labels = ['bug', 'test']
     const issueNumber = context.payload.number;
 
     core.info(`Add labels: ${labels} to ${owner}/${repo}#${issueNumber}`);
