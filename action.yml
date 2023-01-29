@@ -1,4 +1,4 @@
-name: 'Wait'
+name: 'BB-Script'
 description: 'Wait a designated number of milliseconds'
 inputs:
   milliseconds:  # id of input
