@@ -62,7 +62,6 @@ body:
   attributes:
     label: Exceptions (if any)
     description: Include the exception you get when facing this issue.
-    placeholder: ""
   validations:
     required: false
 - type: input
