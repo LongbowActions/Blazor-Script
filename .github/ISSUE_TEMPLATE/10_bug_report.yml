@@ -53,7 +53,9 @@ body:
       **最小复现工程** 
       - 删除 `bin` `obj` 文件夹后打包成 `zip` 压缩包的文件
       - 公开 `github` 仓库地址
-      - 私有 `github` 仓库地址（邀请我）
+      - 私有 `github` 仓库地址（邀请 argo@live.ca）
+
+    placeholder: "drop file in here. 可拖拽文件到这里"
   validations:
     required: true
 - type: textarea
